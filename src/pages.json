@@ -1,11 +1,11 @@
 {
 	"pages": [
-		{
+    {
 			"path": "pages/index/index"
     },
     {
-			"path": "pages/message/message"
-		}
+      "path": "pages/message/message"
+    }
   ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white",

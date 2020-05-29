@@ -1,0 +1,1 @@
+<view class="message data-v-7bcd8dab"><form class="data-v-7bcd8dab"><textarea class="message-area data-v-7bcd8dab"></textarea><van-button vue-id="7ac9e6a0-1" type="primary" class="data-v-7bcd8dab" bind:__l="__l" vue-slots="{{['default']}}">按钮</van-button></form></view>

@@ -1,0 +1,1 @@
+<view data-event-opts="{{[['tap',[['$emit',['tapItem']]]]]}}" class="section-item data-v-22922598" bindtap="__e"><text class="title data-v-22922598">{{title}}</text><text class="title2 data-v-22922598" style="{{'color:'+(title2Color)+';'}}">{{''+(title2&&titleSlice)+''}}</text><image class="icon-angle-right data-v-22922598" src="/static/images/arrow.png"></image></view>

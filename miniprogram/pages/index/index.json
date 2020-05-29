@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "logo-header": "/components/LogoHeader",
+    "aside-menu": "/components/AsideMenu",
+    "blog-item": "/components/BlogItem"
+  }
+}

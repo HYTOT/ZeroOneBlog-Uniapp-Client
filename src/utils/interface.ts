@@ -12,7 +12,19 @@ export interface NavItem {
 
 export interface Technology {
   id:number | string
+  name:string
+}
+
+/**
+ * reader: 阅读数量
+ * messages: 评论数量
+ */
+export interface Article {
+  id:number | string
+  createtime:string
   title:string
+  reader:number
+  messages:number
 }
 
 export interface UniAppAxiosError<T> extends Error {

@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/message/message",
+    "pages/index/index"
+  ],
+  "subPackages": [],
+  "window": {
+    "navigationBarTextStyle": "white",
+    "navigationBarTitleText": "Zero · One",
+    "navigationBarBackgroundColor": "#42b983",
+    "backgroundColor": "#42b983"
+  },
+  "usingComponents": {}
+}

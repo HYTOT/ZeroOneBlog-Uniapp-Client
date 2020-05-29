@@ -8,9 +8,14 @@
         :style="{ color: titleColor}">
         <text>{{ title }}</text>
       </view>
+      <SectionItem title="全部分类"
+        @tapItem="$emit('selectGenre', {
+          id: 0,
+          name: '全部分类',
+        })"/>
       <view v-if="list.length">
         <SectionItem v-for="item in list" :key="item.id"
-          :title="item.title"/>
+          :title="item.name" @tapItem="$emit('selectGenre', item)"/>
       </view>
     </view>
   </view>
@@ -62,6 +67,7 @@ export default class AsideMenu extends Vue {
   }
   .menu-block {
     height: 100vh;
+    overflow-y: scroll;
     background: white;
     box-shadow: 0 0 3vw white;
     .more-operations {
@@ -71,6 +77,10 @@ export default class AsideMenu extends Vue {
       flex-direction: column;
       justify-content: center;
       padding: 4vw 0;
+      position: sticky;
+      top: 0;
+      background: white;
+      box-shadow: 0 1vw 3vw #ccc;
       text {
         flex: 1;
         display: flex;

@@ -9,10 +9,10 @@
         @click="$emit('tapMore')"/>
     </view>
     <view class="bottom">
-      <text class="type-title">{{ type }}</text>
+      <text class="type-title">{{ type }}文章</text>
       <view class="other-pages">
-        <text>留言</text>
-        <text>关于</text>
+        <text @click="switchPage('message')">留言</text>
+        <text @click="switchPage('about')">关于</text>
       </view>
     </view>
   </view>
@@ -20,19 +20,25 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
+import uni from '@dcloudio/uni-app-plus'
 
 @Component
 export default class LogoHeader extends Vue {
 
   @Prop({ type: String, default: 'Zero One Blog' })
   private title?:string
-  @Prop({ type: String, default: '全部分类文章' })
+  @Prop({ type: String, default: '全部分类' })
   private type?:string
 
   private hide:boolean = false
 
   public setHide(hide:boolean) {
     this.hide = hide
+  }
+  private switchPage(url:string):void {
+    uni.navigateTo({
+      url: `/pages/${url}/${url}`
+    })
   }
 
 }
@@ -107,7 +113,7 @@ export default class LogoHeader extends Vue {
     .other-pages {
       text {
         font-size: 4.5vw;
-        margin-left: 4vw;
+        margin-left: 5vw;
         color: $vue-color;
       }
     }
